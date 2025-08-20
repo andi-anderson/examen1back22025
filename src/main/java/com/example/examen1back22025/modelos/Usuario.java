@@ -1,12 +1,27 @@
 package com.example.examen1back22025.modelos;
 
 import com.example.examen1back22025.ayudas.TipoUsuario;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "nombre",length = 50,nullable = false,unique = false)
     private String nombre;
+
+    @Column(name = "correo",length = 50,nullable = false,unique = true)
     private String correo;
+
+    @Column(name = "contraseña",length = 50,nullable = false,unique = false)
     private String contraseña;
+
+    @Column(name = "tipoUsuario",nullable = false,unique = false)
+    @Enumerated(EnumType.STRING)
     private TipoUsuario tipoUsuario;
 
     public Usuario() {

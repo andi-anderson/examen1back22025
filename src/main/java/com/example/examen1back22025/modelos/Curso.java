@@ -1,7 +1,16 @@
 package com.example.examen1back22025.modelos;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="cursos")
 public class Curso {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "nombre",length = 50,nullable = false,unique = false)
     private String nombre;
 
     public Curso() {
