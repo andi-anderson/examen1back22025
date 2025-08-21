@@ -1,7 +1,7 @@
-#EXAMEN BACKEND2 PRIMER MOMENTO
-##Proyecto de clase
+# EXAMEN BACKEND2 PRIMER MOMENTO
+## Proyecto de clase
 
-###PRIMERO
+### PRIMERO
 **Preparando el entorno de trabajo y generación del primer commit**
 
 Ingreso a **Spring Initializr**, allí creo por así decir el esquelo del
@@ -19,7 +19,7 @@ proyecto
 6. Selecciono el Botón **GENERATE**  y listo! ya tengo mi archivo.
 7. En **descargas** descomprimo el archivo...Click derecho...Abrir en Intellij
 
-###SEGUNDO
+### SEGUNDO
 **Preparar el entorno de trabajo**
 
 1. En el lado izquiero verifico el archivo **pom.xml** y las dependencias
@@ -28,7 +28,7 @@ proyecto
  despliego...lifecycle...despliego...Clean con doble click y despues 
  recargo desde **Maven**
 
-###TRES
+### TRES
 **Verificar started en el servidor**
  
 -En el lado izquierdo ubico src...main...java...en la "Clase" 
@@ -36,51 +36,61 @@ proyecto
  le doy **play** y debo visualizar el estado del servidor,marca,puerto y
  conexión. Y listo! ya tengo mi servidor corriendo.
 
-###CUATRO
+### CUATRO
 **Crear repositorio en GitHub**
 -En descargas busco de nuevo el archivo "Examen1back22025" y lo abro en
  Git Bash para generar el primer commit. Y listo! tengo mi primer commit.
 
 
-#CINCO
-##GENERACION SEGUNDO COMMIT
+# CINCO
+## GENERACION SEGUNDO COMMIT
 
 **SE CREAN PAQUETES,CLASES,MODIFICADORES DE ACCESO,
   TIPOS DE DATOS Y ATRIBUTOS**
 
-1. **Crear paquete**...En el paquete... 
- com.example.examen1backend22025...click derecho...new...Package...**modelos**
-2. **Crear paquete**...En el paquete...
- com.example.examen1backend22025...click derecho...new...Package...**ayudas** 
+1. **Crear paquete**...En el paquete...
+   com.example.examen1backend22025...click derecho...new...Package...**modelos**
+
+2.  **Crear paquete**...En el paquete...
+    com.example.examen1backend22025...click derecho...new...Package...**ayudas**
 
 3. **Crear Clase**...
- En el paquete "modelos"...click derecho...new...Java Class...**Curso**
-4. **Crear Clase**...
- En el paquete "modelos"...click derecho...new...Java Class...**Docente**
+   En el paquete "modelos"...click derecho...new...Java Class...**Curso**
+
+4.  **Crear Clase**...
+    En el paquete "modelos"...click derecho...new...Java Class...**Docente**
+
 5. **Crear Clase**...
- En el paquete "modelos"...click derecho...new...Java Class...**Usuario**
+   En el paquete "modelos"...click derecho...new...Java Class...**Usuario**
 
-**Modificadores de acceso**
-6. Se asignan modificadores de acceso, public para los paquetes y private para
- los atributos
+   **Modificadores de acceso**
+
+6.  Se asignan modificadores de acceso, public para los paquetes y private para
+    los atributos
+
 7. En los tipos de dato se asigna integer para los "id", String para los
- demás atributos; los tipo "Enum" llevan nombre nemotécnico 
- con respecto al nombre del atributo, "variación en plural según el caso"
- ejemplo plural:   private Especialidades especialidad;
- ejemplo singular: private TipoUsuario tipoUsuario;
+   demás atributos; los tipo "Enum" llevan nombre nemotécnico
+   con respecto al nombre del atributo, "variación en plural según el caso"
+   ejemplo plural:   private Especialidades especialidad;
+   ejemplo singular: private TipoUsuario tipoUsuario;
 
-**Constructores, getter y setter**
+   **Constructores, getter y setter**
+
 8. Dentro de la clase, no! por fuera de los corchetes,después del ultimo atributo
- se agrega primero un constructor vacío, luego un constructor lleno y por
- ultimo getter and setter.
-9. "**Construstor Vacío**"...Click derecho...Generate...Constructor...Select None 
-10. "**Constructor LLeno**"...Click derecho...Generate...Constructor...
- Shift y selecciono todos los atributos...ok
-11. "**Getter and Setter**"...Click derecho...Generate...Getter and Setter...
- Shift y selecciono todos los atributos...ok  y listo! tengo mi segundo commit.
+   se agrega primero un constructor vacío, luego un constructor lleno y por
+   último getter and setter.
 
- #SEIS
-##GENERACIÓN TERCER COMMIT
+9. "**Construstor Vacío**"...Click derecho...Generate...Constructor...Select None
+
+10. "**Constructor LLeno**"...Click derecho...Generate...Constructor...
+    Shift y selecciono todos los atributos...ok
+
+11. "**Getter and Setter**"...Click derecho...Generate...Getter and Setter...
+    Shift y selecciono todos los atributos...ok  y listo! tengo mi segundo commit.
+
+
+ # SEIS
+## GENERACIÓN TERCER COMMIT
 
 SE CONFIGURA SERVIDOR **application.properties**,
 SE CREA BASE DE DATOS **"phpMyAdmin"**,
@@ -106,7 +116,21 @@ Configurar desde src/main/resources/application.properties
 - siempre se ponen **encima** de aquello que quiero volver especial
 - ejemplo para crear tabla: `@Entity
                              @Table(name="cursos")
-                             public class Curso {}`
+                             public class Curso {}` y listo! ya tengo mi tercer commit
+
+## SIETE
+### GENERACIÓN CUARTO COMMIT
+
+**VERIFICAR TABLAS**
+**RELACIONAR TABLAS**
+
+-  **Reviso en phpMyAdmin la creación de la tablas Curso,Docente,Usuario.**
+-  Relaciono las tablas...
+-  **Si una relación es "muchos"** (@OneToMany o @ManyToMany), 
+   **SIEMPRE** debe ser una colección (List<>, Set<>, etc.), **nunca un solo objeto.**
+-  **Si es "uno"** (@OneToOne o @ManyToOne), **ahí sí va un objeto simple.**
+-  Y listo! ya tengo mi cuarto commit
+
 
             
 

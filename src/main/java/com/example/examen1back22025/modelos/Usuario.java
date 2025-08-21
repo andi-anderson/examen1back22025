@@ -1,7 +1,11 @@
 package com.example.examen1back22025.modelos;
 
 import com.example.examen1back22025.ayudas.TipoUsuario;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import java.util.List;
+import java.util.ArrayList;
+
 
 @Entity
 @Table(name = "usuarios")
@@ -23,6 +27,21 @@ public class Usuario {
     @Column(name = "tipoUsuario",nullable = false,unique = false)
     @Enumerated(EnumType.STRING)
     private TipoUsuario tipoUsuario;
+
+   //Relación OnetoOne con Docente
+    @OneToOne(mappedBy = "usuario",cascade = CascadeType.ALL)
+    @JsonManagedReference(value = "relacionDocenteUsuario")
+    private Docente docente;
+
+    //Relación ManyToMany con curso
+    @ManyToMany
+    @JoinTable(name = "usuario_curso",//tabla intermedia
+    joinColumns = @JoinColumn(name = "usuario_id"),
+    inverseJoinColumns =
+    @JoinColumn(name = "curso_id"))
+    @JsonManagedReference(value = "relacionCursoUsuario")
+    private List<Curso> cursos = new ArrayList<>();
+
 
     public Usuario() {
     }
